@@ -26,9 +26,9 @@
                             <div class="icon-box">
                                 <img src="{{ $skill->image }}" alt="{{ $skill->title }}">
                             </div>
-                            {{-- <div class="number">{{ $skill->percent }}%</div> --}}
+                            <div class="number">{{ $skill->title }}</div>
                         </div>
-                        <p>{{ $skill->title }}</p>
+                        {{-- <p>{{ $skill->title }}</p> --}}
                     </div>
                 @endforeach
             </div>
