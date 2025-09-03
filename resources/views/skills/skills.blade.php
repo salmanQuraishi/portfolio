@@ -28,7 +28,7 @@
                             </div>
                             <div class="number">{{ $skill->percent }}%</div>
                         </div>
-                        <p>{{ $skill->title }}</p>
+                        {{-- <p>{{ $skill->title }}</p> --}}
                     </div>
                 @endforeach
             </div>
