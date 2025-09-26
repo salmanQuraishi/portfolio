@@ -21,30 +21,30 @@ class WebSettingController extends Controller
             'address' => 'required'
         ]);
         $websetting = WebSetting::find(1);
-        if($request['logo'] != NULL || $request['logo'] != 0)
-        {
-            $img_name = 'logo'.time().'.'.$request->logo->getClientOriginalExtension();
+        if ($request->hasFile('logo')) {
+            $img_name = 'logo' . time() . '.' . $request->logo->getClientOriginalExtension();
             $request->logo->move(public_path('dynamic/logos/'), $img_name);
-            $websetting->logo = 'dynamic/logos/'.$img_name;
+            $websetting->logo = 'dynamic/logos/' . $img_name;
         }
-        if($request->favicon != NULL || $request->favicon != 0)
-        {
-            $img_name2 = 'favicon'.time().'.'.$request->favicon->getClientOriginalExtension();
+
+        if ($request->hasFile('favicon')) {
+            $img_name2 = 'favicon' . time() . '.' . $request->favicon->getClientOriginalExtension();
             $request->favicon->move(public_path('dynamic/favicon/'), $img_name2);
-            $websetting->favicon = 'dynamic/favicon/'.$img_name2;
+            $websetting->favicon = 'dynamic/favicon/' . $img_name2;
         }
-        if($request['logo_dark'] != NULL || $request['logo_dark'] != 0)
-        {
-            $img_name = 'logo'.time().'.'.$request->logo_dark->getClientOriginalExtension();
-            $request->logo_dark->move(public_path('dynamic/logos/'), $img_name);
-            $websetting->logo_dark = 'dynamic/logos/'.$img_name;
+
+        if ($request->hasFile('logo_dark')) {
+            $img_name_dark = 'logo_dark' . time() . '.' . $request->logo_dark->getClientOriginalExtension();
+            $request->logo_dark->move(public_path('dynamic/logos/'), $img_name_dark);
+            $websetting->logo_dark = 'dynamic/logos/' . $img_name_dark;
         }
-        if($request->favicon_dark != NULL || $request->favicon_dark != 0)
-        {
-            $img_name2 = 'favicon'.time().'.'.$request->favicon_dark->getClientOriginalExtension();
-            $request->favicon_dark->move(public_path('dynamic/favicon/'), $img_name2);
-            $websetting->favicon_dark = 'dynamic/favicon/'.$img_name2;
+
+        if ($request->hasFile('favicon_dark')) {
+            $img_name_dark2 = 'favicon_dark' . time() . '.' . $request->favicon_dark->getClientOriginalExtension();
+            $request->favicon_dark->move(public_path('dynamic/favicon/'), $img_name_dark2);
+            $websetting->favicon_dark = 'dynamic/favicon/' . $img_name_dark2;
         }
+
         $websetting->title = $request['title'];
         $websetting->email = $request['email'];
         $websetting->phone = $request['phone'];
