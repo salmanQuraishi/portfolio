@@ -25,7 +25,7 @@
                                         <div class="works-content">
                                             <span class="number">{{$education->year}}</span>
                                             <h5 class="title">{{$education->title}}</h5>
-                                            <span class="sub-title">{{$education->company}}</span>
+                                            <span class="sub-title">{{$education->university}}</span>
                                         </div>
                                     </div>
                                 @endforeach
