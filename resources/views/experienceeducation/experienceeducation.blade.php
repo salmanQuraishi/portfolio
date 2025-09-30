@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="works-wrapper">
-                        <div class="works-content-item">
+                        <div class="works-content-item col-md-6">
                             <div class="section-header wow fadeInUp" data-wow-delay=".3s">
                                 <h2 class="section-title"><i class="flaticon-recommendation"></i> My Education</h2>
                             </div>
@@ -31,7 +31,7 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div class="works-content-item">
+                        <div class="works-content-item col-md-6">
                             <div class="section-header wow fadeInUp" data-wow-delay=".3s">
                                 <h2 class="section-title"><i class="flaticon-recommendation"></i> My Experience</h2>
                             </div>
